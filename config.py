@@ -3,7 +3,7 @@
 # ID of this PID
 PID_ID = "0100"
 
-TEST = True
+TEST = False
 
 # IMPORTANT - NEED TO EQUAL THE TIME IN pidconfig.json
 LASTUPDATETIME = "2017-11-01 04:30 PM"
