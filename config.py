@@ -63,7 +63,8 @@ RECONNECTION_TIME = 15
 
 
 # reboot time set to 3:00 AM if PID is ran overnight (need quotes)
-REBOOTTIME = ""
+REBOOTTIME = "03:00:00"
+DOREBOOT = False
 
 # First train currently is 05:57  PID first gather data at 05:55
 FIRSTTRAIN = "05:55:00"  

@@ -298,8 +298,8 @@ class Application(tk.Frame):
         data = None
         hasError = False
         errorString = ""
-        currentThreadCounter = self.threadcounter;
-        self.threadcounter += 1;
+        currentThreadCounter = self.threadcounter
+        self.threadcounter += 1
 
         print "Enters getEtaCallback : ",  time.strftime ('%H:%M:%S'), " Thread = ", currentThreadCounter
 
@@ -660,9 +660,10 @@ class Application(tk.Frame):
             print "Off Operation Hours"
             self.operationHours= False
 
-            if (curTime > self.rebootTime) & (curTime < self.rebootTimeLimit):
-                print "Rebooting ... "
-                self.rebootPID()
+            if self.DOREBOOT:
+                if (curTime > self.rebootTime) & (curTime < self.rebootTimeLimit):
+                    print "Rebooting ... "
+                    self.rebootPID()
         else:
             self.operationHours= True
 
