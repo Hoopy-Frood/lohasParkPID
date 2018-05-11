@@ -670,6 +670,7 @@ class Application(tk.Frame):
 
         if curDay != self.dateLabel["text"]:
             self.dateLabel["text"] = curDay
+            self.UrlBuilder()
 
         curTime = time.strftime ('%I:%M:%S').lstrip('0') + time.strftime(' %p').lower()
 
@@ -684,6 +685,6 @@ class Application(tk.Frame):
 
 #### Start Applicaiton
 app = Application()
-app.master.title('Cebu Bus Terminal PID')
+app.master.title('LOHAS Park Station PID')
 
 app.mainloop()

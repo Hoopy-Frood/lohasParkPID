@@ -3,7 +3,7 @@
 # ID of this PID
 PID_ID = "0100"
 
-TEST = False
+TEST = True
 
 # IMPORTANT - NEED TO EQUAL THE TIME IN pidconfig.json
 LASTUPDATETIME = "2017-11-01 04:30 PM"
@@ -63,7 +63,7 @@ RECONNECTION_TIME = 15
 
 
 # reboot time set to 3:00 AM if PID is ran overnight (need quotes)
-REBOOTTIME = "03:00:00"
+REBOOTTIME = ""
 
 # First train currently is 05:57  PID first gather data at 05:55
 FIRSTTRAIN = "05:55:00"  
