@@ -131,6 +131,8 @@ class Application(tk.Frame):
         self.UrlBuilder()
 
 
+
+
         ## Testing Drawing Route
         #self.routeCanvas = tk.Canvas(self.master,width=1920,height=1080)
         #self.routeCanvas.pack()
@@ -649,6 +651,7 @@ class Application(tk.Frame):
 
         self.after (1800000, self.updateWeather) 
 
+
     #### Clock Related ############################################################
     #### Update Clock - recursive
     def updateClock(self):
@@ -656,12 +659,12 @@ class Application(tk.Frame):
         curTime = datetime.strptime(time.strftime("%H:%M:%S"),"%H:%M:%S")
 	
 
-        if (curTime > self.lastTrainTime) & (curTime < self.firstTrainTime):
+        if (curTime > self.lastTrainTime) and (curTime < self.firstTrainTime):
             print "Off Operation Hours"
             self.operationHours= False
 
-            if self.DOREBOOT:
-                if (curTime > self.rebootTime) & (curTime < self.rebootTimeLimit):
+            if config.DOREBOOT:
+                if (curTime > self.rebootTime) and (curTime < self.rebootTimeLimit):
                     print "Rebooting ... "
                     self.rebootPID()
         else:
@@ -677,7 +680,7 @@ class Application(tk.Frame):
 
         if curTime != self.timeLabel["text"]:
             self.timeLabel["text"] = curTime
-
+        
         self.timeLabel.after (500, self.updateClock)
 
     #### Quit Application

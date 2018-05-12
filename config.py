@@ -69,5 +69,5 @@ DOREBOOT = False
 # First train currently is 05:57  PID first gather data at 05:55
 FIRSTTRAIN = "05:55:00"  
 
-# Last train currently is 00:48  PID stops gather data at 00:48
+# Last train currently is 00:48  PID stops gather data at 00:48 
 LASTTRAIN = "00:48:00"  
